@@ -28,3 +28,8 @@
 ```
 > npx sequelize db:migrate
 ```
+
+### To create migration that modify previous migrations
+```
+> npx sequelize migration:create --name modify_bookings_add_new_fields
+```
