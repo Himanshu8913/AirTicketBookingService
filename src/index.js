@@ -10,6 +10,9 @@ const setupAndStartServer = async () => {
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
+    app.get('/bookingservice/api/v1/home', (req, res) => {
+        return res.json({message: "Hitting the booking service"});
+    })
 
     app.use('/api', apiRoutes);
 
